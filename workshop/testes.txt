@@ -1,0 +1,51 @@
+Backend:
+
+1 cenário: Buscar um cep Válido 
+
+Dado que eu quero buscar um cep
+Quando esse cep for válido 
+Então vou receber um status 200 
+E eu vou receber os campos: cep, logradouro,complemento, bairro, localidade
+
+O que preciso colocar no teste automatizado:
+- Informar um cep válido ok 
+- Fazer a requisição na API 
+- Verificar o status da requisição 
+- Verificar os campos que eu vou receber da requisição
+
+
+2 cenário: Buscar um cep com 9 digitos
+
+Dado que eu quero buscar um cep
+Quando esse cep tem 9 digitos
+Então eu recebo um status 400
+
+3 cenário: Buscar um cep Alfanumerico
+
+Dado que eu quero buscar um cep
+Quando esse cep tem Alfanumerico
+Então eu recebo um status 400
+
+
+FrontEnd:
+
+Cenário 1: Acessar a página com sucesso 
+
+Dado que eu quero acessar o conduit
+Quando eu acesso
+Eu vejo os elementos: botão de sign in, sign up e o texto "A place to share your knowledge."
+
+Cenário 3: Acessar a página de login com sucesso 
+
+Dado que eu quero acessar a pagina de login
+Quando eu acesso pagina home
+E eu clico no botão sign in
+Eu sou redirecionado para pagina de login 
+E eu vejo o texto Sign in, vejo o botão de sign in
+E eu vejo o input de email e password
+
+Cenário 3: Fazer login com um email inexistente
+
+Dado que eu quero fazer login
+Quando eu informo um email inexistente
+Então eu recebo a mensagem: "email or password is invalid"
